@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const data = require('./data/cohorts')
+const port = process.env.PORT || 3000
 
 function findById(data, id){
     for (let i = 0; i < data.length; i++){
@@ -32,4 +33,4 @@ app.get("/:id", function (req, res) {
 })
 
 
-app.listen(3000)
+app.listen(port)
